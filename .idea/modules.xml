@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CompressionMessage/CompressionMessage.iml" filepath="$PROJECT_DIR$/CompressionMessage/CompressionMessage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DNSClient/DNSClient.iml" filepath="$PROJECT_DIR$/DNSClient/DNSClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DNSRecursif/DNSRecursif.iml" filepath="$PROJECT_DIR$/DNSRecursif/DNSRecursif.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DNSServer/DNSServer.iml" filepath="$PROJECT_DIR$/DNSServer/DNSServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServeurDNS.iml" filepath="$PROJECT_DIR$/ServeurDNS.iml" />
     </modules>
   </component>
