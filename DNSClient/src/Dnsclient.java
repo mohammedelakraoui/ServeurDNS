@@ -56,9 +56,29 @@ public class Dnsclient {
         //System.out.println("Data received :" + result);
         clientSocket.close();
     }*/
+	
+	public static void buildMessage()
+	{
+		int port = 53;
+		byte[] data = new byte[512];
+		int ChaineLength = 6;
+		String str = Integer.toHexString(127);
+		System.out.println(str);
+		String strinv = "";
+		 
+		for (int i = str.length(); i < ChaineLength; i++)
+		str="0"+str;
+		 
+		for (int i = 0; i < ChaineLength; i+=2)
+		strinv = str.substring(i, i+2)+strinv;
+		 
+		System.err.println("normal 0x"+str);
+		System.err.println("invers 0x"+strinv);
+	}
 
     public static void main(String args[])
     {
+    	buildMessage();
         try
         {
             DatagramSocket client=new DatagramSocket();
