@@ -75,6 +75,8 @@ public class Dnsclient {
 		System.err.println("normal 0x"+str);
 		System.err.println("invers 0x"+strinv);
 	}
+	
+	public static void 
 
     public static void main(String args[])
     {
@@ -103,9 +105,4 @@ public class Dnsclient {
             System.out.println(e);
         }
     }
-
 }
-
-
-
-
