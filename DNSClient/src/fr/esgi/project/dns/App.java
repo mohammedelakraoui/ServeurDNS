@@ -5,38 +5,46 @@ import java.io.InputStreamReader;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.SocketException;
 
 public class App {
 
 	/**
 	 * @param args
+	 * @throws Exception 
 	 */
-    public static void main(String args[])
+    public static void main(String args[]) throws Exception
     {
-    	buildMessage();
-        try
-        {
-            DatagramSocket client=new DatagramSocket();
-            InetAddress addr=InetAddress.getByName("127.0.0.1");
-
-            byte[] sendbyte=new byte[1024];
-            byte[] receivebyte=new byte[1024];
-            BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Enter le DOMAIN NAME ou IP adress:");
-            String str=in.readLine();
-            sendbyte=str.getBytes();
-            DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,53);
-            client.send(sender);
-            DatagramPacket receiver=new DatagramPacket(receivebyte,receivebyte.length);
-            client.receive(receiver);
-            String s=new String(receiver.getData());
-            System.out.println("IP address ou nom du domaine: "+s.trim());
-            client.close();
-        }
-        catch(Exception e)
-        {
-            System.out.println(e);
-        }
+    	DnsClient c = new DnsClient();
+    	System.out.println(c.getIP("baidu.com"));
+//    	System.out.println("0110 >> 1 -> "+Integer.toBinaryString(0b0110 >> 1));
+//    	System.out.println("0110 >> 2 -> "+Integer.toBinaryString(0b0110 >> 2));
+//    	System.out.println("0110 >> 3 -> "+Integer.toBinaryString(0b0110 >> 3));
+//    	System.out.println("0110 >> 4 -> "+Integer.toBinaryString(0b0110 >> 4));
+//    	buildMessage();
+//        try
+//        {
+//            DatagramSocket client=new DatagramSocket();
+//            InetAddress addr=InetAddress.getByName("127.0.0.1");
+//
+//            byte[] sendbyte=new byte[1024];
+//            byte[] receivebyte=new byte[1024];
+//            BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+//            System.out.println("Enter le DOMAIN NAME ou IP adress:");
+//            String str=in.readLine();
+//            sendbyte=str.getBytes();
+//            DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,53);
+//            client.send(sender);
+//            DatagramPacket receiver=new DatagramPacket(receivebyte,receivebyte.length);
+//            client.receive(receiver);
+//            String s=new String(receiver.getData());
+//            System.out.println("IP address ou nom du domaine: "+s.trim());
+//            client.close();
+//        }
+//        catch(Exception e)
+//        {
+//            System.out.println(e);
+//        }
     }
 
     /*  public static void main(String args[]) throws Exception
@@ -104,5 +112,9 @@ public class App {
 		 
 		System.err.println("normal 0x"+str);
 		System.err.println("invers 0x"+strinv);
+		
+		int a = (15 & 0xff) << 8; 
+		System.out.println("15 : "+Integer.toHexString(15));
+		System.out.println("15 to hexa : "+Integer.toHexString(a));
 	} 
 }

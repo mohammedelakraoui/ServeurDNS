@@ -1,5 +1,7 @@
 package fr.esgi.project.dns;
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.DatagramPacket;
@@ -32,7 +34,7 @@ public class DnsClient {
 	}
 	
 	//"baidu.com"
-	public String getIP(String host) throws IOException{
+	public String getIP(String host) throws Exception{
 		DnsMessage dm = new DnsMessage();
 		
 		dm.header = new DnsHeader();
@@ -41,6 +43,9 @@ public class DnsClient {
 		dm.header.qdcount = 1;
 		
 		dm.question = new DnsQuestion(host);
+		dm.answer = new DnsResourceRecord();
+		dm.authority = new DnsResourceRecord();
+		dm.additional = new DnsResourceRecord();
 		
 		//send
 		byte buffer[] = dm.getBytes();
@@ -53,6 +58,8 @@ public class DnsClient {
 		byte recvBuffer[] = new byte[DnsMessage.UDP_MAX_LENGTH];
 		p = new DatagramPacket(recvBuffer, recvBuffer.length);
 		socket.receive(p);
-		return DnsMessage.parse(recvBuffer, 0, p.getLength());
+
+		return DnsMessage.parse(new DataInputStream(new ByteArrayInputStream(recvBuffer, 0, p.getLength()))).toString();
+//		return DnsMessage.parse(recvBuffer, 0, p.getLength());
 	}
 }

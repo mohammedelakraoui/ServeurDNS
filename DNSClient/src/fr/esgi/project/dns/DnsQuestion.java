@@ -1,5 +1,6 @@
 package fr.esgi.project.dns;
 import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -7,6 +8,7 @@ import java.util.Random;
 
 import fr.esgi.project.dns.util.ResourceRecordClass;
 import fr.esgi.project.dns.util.ResourceRecordType;
+import fr.esgi.project.dns.util.Tools;
 
 public class DnsQuestion {
 	private byte[] qName =  null;
@@ -21,9 +23,17 @@ public class DnsQuestion {
 	
 	public DnsQuestion(String h, short qt, short qc) throws IOException {
 		this.host = h;
+		this.init(this.generateQName(), qt, qc);
+	}
+	
+	public DnsQuestion(byte[] qn, short qt, short qc) throws IOException {
+		this.init(qn, qt, qc);
+	}
+	
+	private void init(byte[] qn, short qt, short qc) throws IOException {
 		this.qType = qt;
 		this.qClass = qc;
-		this.qName = this.generateQName();
+		this.qName = qn;
 	}
 	
 	public byte[] getQName(){
@@ -55,5 +65,25 @@ public class DnsQuestion {
 		bb.putShort(this.qType);
 		bb.putShort(this.qClass);
 		return bb.array();
+	}
+
+	public static DnsQuestion parse(byte[] data, int offset, int length){
+		Tools.readDomainName(data, offset, length);
+		DnsQuestion q;
+		
+		return null;
+	}
+	
+	public static DnsQuestion parse(DataInputStream dis) throws Exception{
+		return new DnsQuestion(Tools.readDomainName(dis), dis.readShort(), dis.readShort());
+	}
+	
+	@Override
+	public String toString(){
+		StringBuffer sb = new StringBuffer();
+		sb.append("QUESTION { HOST : "+this.host+" }");
+		sb.append(" { QTYPE : "+this.qType+" }");
+		sb.append(" { QCLASS : "+this.qClass+" } ");
+		return sb.toString();
 	}
 }
