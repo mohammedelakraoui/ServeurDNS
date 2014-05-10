@@ -43,7 +43,7 @@ public class Dnsclient {
         query[25] = 0x6e;
         query[26] = 0x00;
         query[27] = 0x00;
-        query[28] = 0x01;
+        query[y;
         query[29] = 0x00;
         query[30] = 0x01;
         DatagramPacket queryPacket = new DatagramPacket(query, query.length, defaultDnsServer, 53);
@@ -61,22 +61,30 @@ public class Dnsclient {
     {
         try
         {
+            boolean switch_=true;
+            while(switch_)
+            {
             DatagramSocket client=new DatagramSocket();
             InetAddress addr=InetAddress.getByName("127.0.0.1");
 
             byte[] sendbyte=new byte[1024];
             byte[] receivebyte=new byte[1024];
             BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Enter le DOMAIN NAME ou IP adress:");
+            System.out.println("Entrer le Nom du Domaine ou IP adress:");
             String str=in.readLine();
             sendbyte=str.getBytes();
-            DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,1309);
+            DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,53);
             client.send(sender);
             DatagramPacket receiver=new DatagramPacket(receivebyte,receivebyte.length);
             client.receive(receiver);
             String s=new String(receiver.getData());
-            System.out.println("IP address ou nom du domaine: "+s.trim());
+            System.out.println("IP address ou nom de domaine: "+s.trim());
+            System.out.println("---------------------");
             client.close();
+                System.out.println("Vous voullez appler le DNS encore une fois? y/n");
+                if(System.in.read()=='n' || System.in.read()=='N')
+                {switch_=false;}
+            }
         }
         catch(Exception e)
         {

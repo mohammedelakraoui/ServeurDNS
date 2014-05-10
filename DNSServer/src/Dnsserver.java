@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -9,7 +10,7 @@ import java.util.Map;
 public class Dnsserver  {
 
     private HashMap<String,String> HotDomaine=null;
-
+    private int[]  PortDNS={53,54,55};
 
     public Dnsserver()
     {
@@ -28,7 +29,7 @@ public class Dnsserver  {
 
     public String  ResolutDirect(String NomDemaine)
     {
-        String AdressIP="";
+        String AdressIP=null;
         AdressIP=(String) HotDomaine.get(NomDemaine);
         return AdressIP;
 
@@ -37,7 +38,7 @@ public class Dnsserver  {
     public String  ResolutInverse(String IP)
     {
 
-        String NomDomaine="";
+        String NomDomaine=null;
 
         for(Map.Entry<String,String> entry : HotDomaine.entrySet())
         {
@@ -55,106 +56,80 @@ public class Dnsserver  {
 //---------------------------------------------------
 
 
-  /*  public static void main (String args[]) {
-/** default port */
-      /*  Dnsserver dnsserver=new Dnsserver();
-        int port = 1234;
-        ServerSocket server = null;
-        Socket currentConnexion;
-        InputStream socketInputStream;
-        OutputStream socketOuputStream;
-        try {
-            server = new ServerSocket(port);
-        }
-        catch (IOException ex)
-        {
-            // For any reason, impossible to create the socket on the required port.
-            System.err.println("Impossible de créer un socket serveur sur ce port : "+ex);
-
-            try { // trying an anonymous one.
-                server = new ServerSocket(0);
-            }
-            catch (IOException ex2) { // Impossible to connect!
-                System.err.println("Impossible de créer un socket serveur : "+ex2);
-            }
-        }
-
-        if (null != server ) {
-            try {
-                System.out.println("DNS en attente de connexion sur le port : "+server.getLocalPort());
-                while (true) {
-
-                    currentConnexion = server.accept();
-                    //;
-                    System.out.print("Connecting.....");
-                    InetAddress localAdr = InetAddress.getLocalHost();
-
-                    OutputStream out = currentConnexion.getOutputStream();
-                    //out.write(dnsserver.ResolutDirect("www.site1.com").getBytes());
-
-                    out.write(localAdr.getByName("").toString().getBytes());
-                    out.flush();
-                    currentConnexion.close();
-                    System.out.println("Done!");
-                }
-            }
-            catch (Exception ex) {
-                // Error of connection
-                System.err.println("Une erreur est survenue : "+ex);
-                ex.printStackTrace();
-            }
-        }
-
-
-
-    }*/
-
-    public static void main(String args[])
-    {
-        try
-        {
-            DatagramSocket server=new DatagramSocket(1309);
+    public static void main(String args[]) throws IOException {
+      //  try
+       // {
+            DatagramSocket server=new DatagramSocket(53);
             Dnsserver dnsserver=new Dnsserver();
             while(true)
             {
+                System.out.println("DNS connecté...");
                 byte[] sendbyte=new byte[1024];
                 byte[] receivebyte=new byte[1024];
                 DatagramPacket receiver=new DatagramPacket(receivebyte,receivebyte.length);
                 server.receive(receiver);
                 String str=new String(receiver.getData());
-                String s=str.trim();
-                System.out.println("Tram du client est : "+s);
+                String req=str.trim();
+                System.out.println("Tram du client est : "+req);
                 InetAddress addr=receiver.getAddress();
                 int port=receiver.getPort();
-                String ip=dnsserver.ResolutDirect(s);
-                String name=dnsserver.ResolutInverse(s);
-                System.out.println(name);
-                    if(ip.isEmpty())
+
+                String ip=dnsserver.ResolutDirect(req);
+                String name=dnsserver.ResolutInverse(req);
+
+                    if(name!=null)
                     {
-                        sendbyte=name.getBytes();
+                        System.out.println("Envoie Name");
+                        sendbyte=("DNS Autorité: "+name).getBytes();
                         DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                         server.send(sender);
-                        break;
+                      //  break;
                     }
-                    else if(name.isEmpty())
+                    if(ip!=null)
                     {
-                        sendbyte=ip.getBytes();
+                        System.out.println("Envoie IP");
+                        sendbyte=("DNS Autorité: "+ip).getBytes();
                         DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                         server.send(sender);
-                        break;
+                      // break;
                     }
-                else{
-                        sendbyte="HTTP Error IP ou Host n'exist pas".getBytes();
+                if(name==null && ip==null){
+                        System.out.println("Distribution d'order");
+                        sendbyte=dnsserver.Distribuer(req).getBytes();
                         DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                         server.send(sender);
                     }
 
             }
-        }
+       /* }
         catch(Exception e)
         {
             System.out.println(e.getMessage());
-        }
+        }*/
+    }
+
+
+   private  String Distribuer(String requete) throws IOException {
+       String Data="";
+       for (int i=0;i<this.PortDNS.length;i++)
+       {
+        DatagramSocket client=new DatagramSocket();
+        InetAddress addr=InetAddress.getByName("127.0.0.1");
+        byte[] sendbyte=new byte[1024];
+        byte[] receivebyte=new byte[1024];
+        sendbyte=requete.getBytes();
+        DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,54);
+        client.send(sender);
+        DatagramPacket receiver=new DatagramPacket(receivebyte,receivebyte.length);
+        client.receive(receiver);
+        String s=new String(receiver.getData());
+        Data=s.trim();
+        //System.out.println("IP address ou nom de domaine: "+s.trim());
+        //System.out.println("---------------------");
+        client.close();
+       }
+       return Data;
+
     }
 
 
