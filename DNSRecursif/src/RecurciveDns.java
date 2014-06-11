@@ -63,7 +63,7 @@ import java.net.InetAddress;
                  {
                      this.NextDns+=1;
                      System.out.println(" Recurssif to next dns server...DNS "+ this.NextDns);
-                     if(this.NextDns==this.PortDNS.length-1)
+                     if(this.NextDns==this.PortDNS.length)
                      {this.NextDns=0;}
                      client.close();
                     return distribuer(requete);
@@ -73,7 +73,6 @@ import java.net.InetAddress;
             //}
             this.NextDns=0;
             client.close();
-            System.out.println("data reçu: "+Data+": "+Data.length());
             return Data;
 
         }

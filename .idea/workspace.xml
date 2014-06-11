@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="666fce7c-3100-4a96-9d45-60aadf377129" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DNSServer/src/DNSServer2.java" afterPath="$PROJECT_DIR$/DNSServer/src/DNSServer2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DNSServer/src/DNSserver1.java" afterPath="$PROJECT_DIR$/DNSServer/src/DNSserver1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HttpServer/src/Httpserver.java" afterPath="$PROJECT_DIR$/HttpServer/src/Httpserver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java" afterPath="$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -69,10 +68,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RecurciveDns.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RecurciveDns.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="12" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.6136364" vertical-offset="811" max-vertical-offset="1547">
+            <state line="68" column="26" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1530">
               <folding />
             </state>
           </provider>
@@ -81,7 +80,7 @@
       <file leaf-file-name="Httpserver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HttpServer/src/Httpserver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="19" selection-start="2713" selection-end="2713" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1802">
+            <state line="88" column="33" selection-start="3106" selection-end="3106" vertical-scroll-proportion="0.0" vertical-offset="1236" max-vertical-offset="1802">
               <folding />
             </state>
           </provider>
@@ -90,7 +89,7 @@
       <file leaf-file-name="DNSServer3.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="28" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0" vertical-offset="1236" max-vertical-offset="1802">
+            <state line="39" column="50" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802">
               <folding />
             </state>
           </provider>
@@ -99,7 +98,7 @@
       <file leaf-file-name="DNSserver1.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSserver1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="0" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1530">
+            <state line="87" column="0" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1530">
               <folding>
                 <element signature="method#ResolutDirect#0;class#DNSserver1#0" expanded="false" />
                 <element signature="method#ResolutInverse#0;class#DNSserver1#0" expanded="false" />
@@ -108,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DNSServer2.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DNSServer2.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="24" selection-start="2503" selection-end="2503" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
+            <state line="15" column="23" selection-start="346" selection-end="346" vertical-scroll-proportion="0.42929292" vertical-offset="0" max-vertical-offset="1887">
               <folding />
             </state>
           </provider>
@@ -138,10 +137,10 @@
         <option value="$PROJECT_DIR$/HttpServer/src/DnsClientToRecurciveDNS.java" />
         <option value="$PROJECT_DIR$/DNSServer/src/Dnsserver.java" />
         <option value="$PROJECT_DIR$/DNSServer/src/DNSServer3.java" />
-        <option value="$PROJECT_DIR$/HttpServer/src/Httpserver.java" />
         <option value="$PROJECT_DIR$/DNSServer/src/RecurciveDns.java" />
         <option value="$PROJECT_DIR$/DNSServer/src/DNSserver1.java" />
         <option value="$PROJECT_DIR$/DNSServer/src/DNSServer2.java" />
+        <option value="$PROJECT_DIR$/HttpServer/src/Httpserver.java" />
         <option value="$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java" />
       </list>
     </option>
@@ -669,11 +668,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.RecurciveDns" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Httpserver" />
-        <item index="2" class="java.lang.String" itemvalue="Application.DNSServer2" />
-        <item index="3" class="java.lang.String" itemvalue="Application.DNSserver1" />
-        <item index="4" class="java.lang.String" itemvalue="Application.DNSServer3" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Httpserver" />
+        <item index="1" class="java.lang.String" itemvalue="Application.RecurciveDns" />
+        <item index="2" class="java.lang.String" itemvalue="Application.DNSServer3" />
+        <item index="3" class="java.lang.String" itemvalue="Application.DNSServer2" />
+        <item index="4" class="java.lang.String" itemvalue="Application.DNSserver1" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -713,7 +712,7 @@
       <workItem from="1402401391240" duration="501000" />
       <workItem from="1402489406642" duration="11710000" />
       <workItem from="1402503041473" duration="2800000" />
-      <workItem from="1402506434370" duration="14487000" />
+      <workItem from="1402506434370" duration="15280000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1396626624625</created>
@@ -755,11 +754,15 @@
       <created>1402518866317</created>
       <updated>1402518866317</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;DNSClient/src/Dnsclient.java&#10;">
+      <created>1402524846029</created>
+      <updated>1402524846029</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64676000" />
+    <option name="totallyTimeSpent" value="65469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1059,7 +1062,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HttpServer/src/Httpserver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="19" selection-start="2713" selection-end="2713" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1802">
+        <state line="88" column="33" selection-start="3106" selection-end="3106" vertical-scroll-proportion="0.0" vertical-offset="1236" max-vertical-offset="1802">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="26" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="50" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802">
           <folding />
         </state>
       </provider>
@@ -1076,21 +1093,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="24" selection-start="2503" selection-end="2503" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="28" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0" vertical-offset="1236" max-vertical-offset="1802">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="12" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.6136364" vertical-offset="811" max-vertical-offset="1547">
+        <state line="15" column="23" selection-start="346" selection-end="346" vertical-scroll-proportion="0.42929292" vertical-offset="0" max-vertical-offset="1887">
           <folding />
         </state>
       </provider>

@@ -86,7 +86,7 @@ public class Httpserver {
                 // this blank line signals the end of the headers
                 out.println("");
                 // Send the HTML page
-                out.println("<H1>Response: "+response+"</H2>");
+                out.println("<H1>"+response+"</H2>");
                 out.flush();
                 remote.close();
             } catch (Exception e) {
