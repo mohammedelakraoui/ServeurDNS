@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="666fce7c-3100-4a96-9d45-60aadf377129" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\server-pc\IdeaProjects\ServeurDNS\DNSServer\src\RecurciveDns.java" afterPath="$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ServeurDNS.iws" />
@@ -713,7 +712,7 @@
       <workItem from="1402401391240" duration="501000" />
       <workItem from="1402489406642" duration="11710000" />
       <workItem from="1402503041473" duration="2800000" />
-      <workItem from="1402506434370" duration="8506000" />
+      <workItem from="1402506434370" duration="8520000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1396626624625</created>
@@ -747,11 +746,15 @@
       <created>1402518759752</created>
       <updated>1402518759752</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;DNSClient/src/Dnsclient.java&#10;">
+      <created>1402518854209</created>
+      <updated>1402518854209</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58695000" />
+    <option name="totallyTimeSpent" value="58709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
