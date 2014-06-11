@@ -64,7 +64,10 @@ import java.net.InetAddress;
                      this.NextDns+=1;
                      System.out.println(" Recurssif to next dns server...DNS "+ this.NextDns);
                      if(this.NextDns==this.PortDNS.length)
-                     {this.NextDns=0;}
+                     {
+                         this.NextDns=0;
+                        return "Error HTTP";
+                     }
                      client.close();
                     return distribuer(requete);
 
