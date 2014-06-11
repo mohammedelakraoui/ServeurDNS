@@ -64,7 +64,7 @@ public class DnsResourceRecord {
 		sb.append("{ RDLNEGTH : "+this.rdlength+" } ");
 		sb.append("{ RDATA : "+this.rData+" } ");
 		// ip address
-		sb.append("address IP");
+		sb.append("address IP : ");
 		sb.append((int)this.rData[0]&0xFF);
 		sb.append('.');
 		sb.append((int)this.rData[1]&0xFF);

@@ -79,9 +79,13 @@ public class DnsMessage {
 	public String toString(){
 		StringBuffer sb = new StringBuffer();
 		sb.append(this.header.toString());
+		sb.append('\n');
 		sb.append(this.question.toString());
+		sb.append('\n');
 		sb.append(this.answer.toString());
+		sb.append('\n');
 		sb.append(this.authority.toString());
+		sb.append('\n');
 		sb.append(this.additional.toString());
 		return sb.toString();
 	}
