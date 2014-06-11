@@ -64,7 +64,7 @@ public class Tools {
 			if (strBuf.length() > 0)
 				strBuf.append('.');
 			while (count-- > 0) {
-				System.out.println(count);
+				//System.out.println(count);
 				byte c = dis.readByte();
 				strBuf.append((char)c);
 			}
