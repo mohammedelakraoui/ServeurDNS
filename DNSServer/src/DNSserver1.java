@@ -85,7 +85,7 @@ public class DNSserver1 {
                 sendbyte=("Reponse  DNS1:"+name).getBytes();
                 DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                 server.send(sender);
-                //  break;
+
             }
             if(ip!=null)
             {
@@ -93,7 +93,7 @@ public class DNSserver1 {
                 sendbyte=("Reponse  DNS1:"+ip).getBytes();
                 DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                 server.send(sender);
-                // break;
+
             }
             if(ip==null && name==null)
             {

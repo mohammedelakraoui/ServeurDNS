@@ -82,10 +82,10 @@ public class DNSServer2 {
             if(name!=null)
             {
 
-                sendbyte=("send  DNS2: "+name).getBytes();
+                sendbyte=("Response  DNS2: "+name).getBytes();
                 DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                 server.send(sender);
-                //  break;
+
             }
             if(ip!=null)
             {
@@ -93,7 +93,7 @@ public class DNSServer2 {
                 sendbyte=("Reponse  DNS2: "+ip).getBytes();
                 DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                 server.send(sender);
-                // break;
+
             }
             if(ip==null && name==null)
             {
@@ -101,6 +101,7 @@ public class DNSServer2 {
                 sendbyte=("null").getBytes();
                 DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                 server.send(sender);
+
             }
 
         }

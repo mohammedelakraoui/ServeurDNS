@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="666fce7c-3100-4a96-9d45-60aadf377129" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DNSServer/src/DNSServer2.java" afterPath="$PROJECT_DIR$/DNSServer/src/DNSServer2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DNSServer/src/DNSserver1.java" afterPath="$PROJECT_DIR$/DNSServer/src/DNSserver1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java" afterPath="$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ServeurDNS.iws" />
@@ -69,7 +72,7 @@
       <file leaf-file-name="RecurciveDns.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="0" selection-start="2741" selection-end="2741" vertical-scroll-proportion="1.1252236" vertical-offset="510" max-vertical-offset="1428">
+            <state line="65" column="12" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.6136364" vertical-offset="811" max-vertical-offset="1547">
               <folding />
             </state>
           </provider>
@@ -78,7 +81,7 @@
       <file leaf-file-name="Httpserver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HttpServer/src/Httpserver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="19" selection-start="2713" selection-end="2713" vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="1802">
+            <state line="78" column="19" selection-start="2713" selection-end="2713" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1802">
               <folding />
             </state>
           </provider>
@@ -87,7 +90,7 @@
       <file leaf-file-name="DNSServer3.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="32" selection-start="1955" selection-end="1974" vertical-scroll-proportion="0.0" vertical-offset="1069" max-vertical-offset="1802">
+            <state line="22" column="28" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0" vertical-offset="1236" max-vertical-offset="1802">
               <folding />
             </state>
           </provider>
@@ -96,7 +99,7 @@
       <file leaf-file-name="DNSserver1.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSserver1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="51" selection-start="2004" selection-end="2004" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1530">
+            <state line="87" column="0" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1530">
               <folding>
                 <element signature="method#ResolutDirect#0;class#DNSserver1#0" expanded="false" />
                 <element signature="method#ResolutInverse#0;class#DNSserver1#0" expanded="false" />
@@ -108,11 +111,8 @@
       <file leaf-file-name="DNSServer2.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="53" selection-start="2878" selection-end="2878" vertical-scroll-proportion="0.0" vertical-offset="593" max-vertical-offset="1530">
-              <folding>
-                <element signature="method#ResolutDirect#0;class#DNSServer2#0" expanded="false" />
-                <element signature="method#ResolutInverse#0;class#DNSServer2#0" expanded="false" />
-              </folding>
+            <state line="89" column="24" selection-start="2503" selection-end="2503" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,10 +138,11 @@
         <option value="$PROJECT_DIR$/HttpServer/src/DnsClientToRecurciveDNS.java" />
         <option value="$PROJECT_DIR$/DNSServer/src/Dnsserver.java" />
         <option value="$PROJECT_DIR$/DNSServer/src/DNSServer3.java" />
-        <option value="$PROJECT_DIR$/DNSServer/src/DNSserver1.java" />
-        <option value="$PROJECT_DIR$/DNSServer/src/DNSServer2.java" />
         <option value="$PROJECT_DIR$/HttpServer/src/Httpserver.java" />
         <option value="$PROJECT_DIR$/DNSServer/src/RecurciveDns.java" />
+        <option value="$PROJECT_DIR$/DNSServer/src/DNSserver1.java" />
+        <option value="$PROJECT_DIR$/DNSServer/src/DNSServer2.java" />
+        <option value="$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java" />
       </list>
     </option>
   </component>
@@ -668,11 +669,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.DNSserver1" />
-        <item index="1" class="java.lang.String" itemvalue="Application.DNSServer2" />
-        <item index="2" class="java.lang.String" itemvalue="Application.DNSServer3" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Httpserver" />
-        <item index="4" class="java.lang.String" itemvalue="Application.RecurciveDns" />
+        <item index="0" class="java.lang.String" itemvalue="Application.RecurciveDns" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Httpserver" />
+        <item index="2" class="java.lang.String" itemvalue="Application.DNSServer2" />
+        <item index="3" class="java.lang.String" itemvalue="Application.DNSserver1" />
+        <item index="4" class="java.lang.String" itemvalue="Application.DNSServer3" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -712,7 +713,7 @@
       <workItem from="1402401391240" duration="501000" />
       <workItem from="1402489406642" duration="11710000" />
       <workItem from="1402503041473" duration="2800000" />
-      <workItem from="1402506434370" duration="8520000" />
+      <workItem from="1402506434370" duration="14487000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1396626624625</created>
@@ -750,15 +751,19 @@
       <created>1402518854209</created>
       <updated>1402518854209</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;DNSClient/src/Dnsclient.java&#10;">
+      <created>1402518866317</created>
+      <updated>1402518866317</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58709000" />
+    <option name="totallyTimeSpent" value="64676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -779,8 +784,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30060422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2837607" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30060422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2786325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -877,10 +882,7 @@
     <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="89" selection-start="2740" selection-end="2740" vertical-scroll-proportion="0.0" vertical-offset="1564" max-vertical-offset="1836">
-          <folding>
-            <element signature="method#ResolutDirect#0;class#DNSServer2#0" expanded="false" />
-            <element signature="method#ResolutInverse#0;class#DNSServer2#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -918,10 +920,7 @@
     <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="91" column="35" selection-start="2628" selection-end="2628" vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="1411">
-          <folding>
-            <element signature="method#ResolutDirect#0;class#DNSServer2#0" expanded="false" />
-            <element signature="method#ResolutInverse#0;class#DNSServer2#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -963,10 +962,7 @@
     <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="25" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="1836">
-          <folding>
-            <element signature="method#ResolutDirect#0;class#DNSServer2#0" expanded="false" />
-            <element signature="method#ResolutInverse#0;class#DNSServer2#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -988,10 +984,7 @@
     <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="25" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="1836">
-          <folding>
-            <element signature="method#ResolutDirect#0;class#DNSServer2#0" expanded="false" />
-            <element signature="method#ResolutInverse#0;class#DNSServer2#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,10 +1016,7 @@
     <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="25" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="1836">
-          <folding>
-            <element signature="method#ResolutDirect#0;class#DNSServer2#0" expanded="false" />
-            <element signature="method#ResolutInverse#0;class#DNSServer2#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,16 +1050,23 @@
         <state line="6" column="4" selection-start="97" selection-end="136" vertical-scroll-proportion="0.27567568" vertical-offset="0" max-vertical-offset="370" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer3.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/net/DatagramSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="32" selection-start="1955" selection-end="1974" vertical-scroll-proportion="0.0" vertical-offset="1239" max-vertical-offset="1802">
+        <state line="67" column="6" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.29040405" vertical-offset="548" max-vertical-offset="21046">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HttpServer/src/Httpserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="19" selection-start="2713" selection-end="2713" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1802">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSserver1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="51" selection-start="2004" selection-end="2004" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1530">
+        <state line="87" column="0" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.0" vertical-offset="624" max-vertical-offset="1530">
           <folding>
             <element signature="method#ResolutDirect#0;class#DNSserver1#0" expanded="false" />
             <element signature="method#ResolutInverse#0;class#DNSserver1#0" expanded="false" />
@@ -1079,24 +1076,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="53" selection-start="2878" selection-end="2878" vertical-scroll-proportion="0.0" vertical-offset="593" max-vertical-offset="1530">
-          <folding>
-            <element signature="method#ResolutDirect#0;class#DNSServer2#0" expanded="false" />
-            <element signature="method#ResolutInverse#0;class#DNSServer2#0" expanded="false" />
-          </folding>
+        <state line="89" column="24" selection-start="2503" selection-end="2503" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1887">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HttpServer/src/Httpserver.java">
+    <entry file="file://$PROJECT_DIR$/DNSServer/src/DNSServer3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="19" selection-start="2713" selection-end="2713" vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="1802">
+        <state line="22" column="28" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0" vertical-offset="1236" max-vertical-offset="1802">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DNSRecursif/src/RecurciveDns.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="2741" selection-end="2741" vertical-scroll-proportion="1.1252236" vertical-offset="510" max-vertical-offset="1428">
+        <state line="65" column="12" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.6136364" vertical-offset="811" max-vertical-offset="1547">
           <folding />
         </state>
       </provider>
