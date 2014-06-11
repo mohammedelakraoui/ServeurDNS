@@ -167,6 +167,9 @@ public class DnsHeader {
 	public String toString(){
 		StringBuffer sb = new StringBuffer();
 		sb.append("HEADER { ID : "+this.id+" } ");
+		sb.append("{ ANCOUNT : "+this.ancount+" } ");
+		sb.append("{ NSCOUNT : "+this.nscount+" } ");
+		sb.append("{ ARCOUNT : "+this.arcount+" } ");
 		return sb.toString();
 	}
 }

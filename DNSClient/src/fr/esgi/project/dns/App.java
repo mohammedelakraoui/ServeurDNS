@@ -16,7 +16,15 @@ public class App {
     public static void main(String args[]) throws Exception
     {
     	DnsClient c = new DnsClient();
+    	System.out.println("domaine : baidu.com");
     	System.out.println(c.getIP("baidu.com"));
+    	System.out.println(System.lineSeparator());
+    	System.out.println("domaine : eatmanga.com");
+    	System.out.println(c.getIP("eatmanga.com"));
+    	System.out.println(System.lineSeparator());
+    	System.out.println("domaine : dpstream.net");
+    	System.out.println(c.getIP("dpstream.net"));
+    	System.out.println(System.lineSeparator());
 //    	System.out.println("0110 >> 1 -> "+Integer.toBinaryString(0b0110 >> 1));
 //    	System.out.println("0110 >> 2 -> "+Integer.toBinaryString(0b0110 >> 2));
 //    	System.out.println("0110 >> 3 -> "+Integer.toBinaryString(0b0110 >> 3));

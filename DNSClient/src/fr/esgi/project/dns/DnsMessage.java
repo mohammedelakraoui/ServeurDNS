@@ -4,6 +4,8 @@ import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 //labels          63 octets or less
@@ -16,9 +18,9 @@ public class DnsMessage {
 	
 	public DnsHeader header;
 	public DnsQuestion question;
-	public DnsResourceRecord answer;
-	public DnsResourceRecord authority;
-	public DnsResourceRecord additional;
+	public List<DnsResourceRecord> answer;
+	public List<DnsResourceRecord> authority;
+	public List<DnsResourceRecord> additional;
 	
 	public int getlength(){
 		int length = 0;
@@ -27,7 +29,8 @@ public class DnsMessage {
 			if(!this.header.qr && null != this.question)
 				length += this.question.getLength();
 			else if(this.header.qr && null != this.answer)
-				length += this.answer.getLength();
+				for(DnsResourceRecord rr : answer)
+					length += rr.getLength();
 		}
 		return length;
 	}
@@ -38,9 +41,15 @@ public class DnsMessage {
 		if(length > 0){
 			bb.put(this.header.getBytes());
 			bb.put(this.question.getBytes());
-//			bb.put(this.answer.getBytes());
-//			bb.put(this.authority.getBytes());
-//			bb.put(this.additional.getBytes());
+			if(null != this.answer)
+				for(DnsResourceRecord rr : this.answer)
+					bb.put(rr.getBytes());
+			if(null != this.authority)
+				for(DnsResourceRecord rr : this.authority)
+					bb.put(rr.getBytes());
+			if(null != this.additional)
+				for(DnsResourceRecord rr : this.additional)
+					bb.put(rr.getBytes());
 		}
 		return bb.array();
 	}
@@ -63,15 +72,18 @@ public class DnsMessage {
 //		for (int i = 0; i < h.qdcount; i++) {
 			dm.question = DnsQuestion.parse(dis);
 //		}
-//		for (int i = 0; i < h.ancount; i++) {
-			dm.answer = DnsResourceRecord.parse(dis); 
-//		}
-//		for (int i = 0; i < h.nscount; i++) {
-			dm.authority = DnsResourceRecord.parse(dis);
-//		}
-//		for (int i = 0; i < h.arcount; i++) {
-			dm.additional = DnsResourceRecord.parse(dis);
-//		}
+		dm.answer = new ArrayList<DnsResourceRecord>();
+		for (int i = 0; i < dm.header.ancount; i++) {
+			dm.answer.add(DnsResourceRecord.parse(dis));
+		}
+		dm.authority = new ArrayList<DnsResourceRecord>();
+		for (int i = 0; i < dm.header.nscount; i++) {
+			dm.authority.add(DnsResourceRecord.parse(dis));
+		}
+		dm.additional = new ArrayList<DnsResourceRecord>();
+		for (int i = 0; i < dm.header.arcount; i++) {
+			dm.additional.add(DnsResourceRecord.parse(dis));
+		}
 		return dm;
 	}
 	
@@ -79,14 +91,35 @@ public class DnsMessage {
 	public String toString(){
 		StringBuffer sb = new StringBuffer();
 		sb.append(this.header.toString());
-		sb.append('\n');
+		sb.append(System.lineSeparator());
 		sb.append(this.question.toString());
-		sb.append('\n');
-		sb.append(this.answer.toString());
-		sb.append('\n');
-		sb.append(this.authority.toString());
-		sb.append('\n');
-		sb.append(this.additional.toString());
+		sb.append(System.lineSeparator());
+		if(null != this.answer){
+			sb.append("ANSWER");
+			sb.append(System.lineSeparator());
+			for(DnsResourceRecord rr : this.answer) {
+				sb.append('\t');
+				sb.append(rr.toString());
+				sb.append(System.lineSeparator());
+			}
+		}
+		if(null != this.authority){
+			sb.append("AUTHORITY");
+			sb.append(System.lineSeparator());
+			for(DnsResourceRecord rr : this.authority) {
+				sb.append('\t');
+				sb.append(rr.toString());
+				sb.append(System.lineSeparator());
+			}
+		}
+		if(null != this.additional){
+			sb.append("ADDITIONAL");
+			sb.append(System.lineSeparator());
+			for(DnsResourceRecord rr : this.additional) {
+				sb.append('\t');
+				sb.append(rr.toString());
+			}
+		}
 		return sb.toString();
 	}
 }

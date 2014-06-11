@@ -43,9 +43,6 @@ public class DnsClient {
 		dm.header.qdcount = 1;
 		
 		dm.question = new DnsQuestion(host);
-		dm.answer = new DnsResourceRecord();
-		dm.authority = new DnsResourceRecord();
-		dm.additional = new DnsResourceRecord();
 		
 		//send
 		byte buffer[] = dm.getBytes();
