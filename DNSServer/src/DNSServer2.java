@@ -11,7 +11,7 @@ import java.util.Map;
 public class DNSServer2 {
 
     private HashMap<String,String> HotDomaine=null;
-
+    private int PortDNS=55;
 
     public DNSServer2()
     {
@@ -60,18 +60,19 @@ public class DNSServer2 {
     public static void main(String args[]) throws IOException {
         //  try
         // {
-        DatagramSocket server=new DatagramSocket(55);
         DNSServer2 dnsserver=new DNSServer2();
+        DatagramSocket server=new DatagramSocket(dnsserver.PortDNS);
+
         while(true)
         {
-            System.out.println("DNS connecté...");
+            System.out.println("DNS connected...");
             byte[] sendbyte=new byte[1024];
             byte[] receivebyte=new byte[1024];
             DatagramPacket receiver=new DatagramPacket(receivebyte,receivebyte.length);
             server.receive(receiver);
             String str=new String(receiver.getData());
             String s=str.trim();
-            System.out.println("Tram du client est : "+s);
+            System.out.println("Request from client:"+s);
             InetAddress addr=receiver.getAddress();
             int port=receiver.getPort();
 
@@ -80,21 +81,27 @@ public class DNSServer2 {
 
             if(name!=null)
             {
-                System.out.println("Envoie Name");
-                sendbyte=("Reponse du DNS2: "+name).getBytes();
+
+                sendbyte=("send  DNS2: "+name).getBytes();
                 DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                 server.send(sender);
                 //  break;
             }
             if(ip!=null)
             {
-                System.out.println("Envoie IP");
-                sendbyte=("Reponse du DNS2: "+ip).getBytes();
+
+                sendbyte=("Reponse  DNS2: "+ip).getBytes();
                 DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                 server.send(sender);
                 // break;
             }
-
+            if(ip==null && name==null)
+            {
+                System.out.println("No Response...");
+                sendbyte=("null").getBytes();
+                DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
+                server.send(sender);
+            }
 
         }
 

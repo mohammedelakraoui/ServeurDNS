@@ -6,27 +6,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by server-pc on 23/04/14.
+ * Created by server-pc on 11/06/14.
  */
-public class DNSserver1 {
+public class DNSServer3 {
 
     private HashMap<String,String> HotDomaine=null;
-    private int PortDNS=54;
-
-    public DNSserver1()
+    private int PortDNS=56;
+    public DNSServer3()
     {
-
         HotDomaine=new HashMap<String, String>();
-        HotDomaine.put("www.google.com","192.77.40.1");
-        HotDomaine.put("www.moi.cn","192.168.999.2");
-        HotDomaine.put("www.oui.de","192.168.784.3");
-        HotDomaine.put("www.non.ma","192.168.78.4");
-        HotDomaine.put("www.images.org","192.168.30.5");
-        HotDomaine.put("www.site.fr","192.168.40.45");
-        //------------------
+        HotDomaine.put("www.site1.com","192.168.40.1");
+        HotDomaine.put("www.site2.cn","192.168.40.2");
+        HotDomaine.put("www.site3.de","192.168.40.3");
+        HotDomaine.put("www.site4.ma","192.168.40.4");
+        HotDomaine.put("www.site5.org","192.168.40.5");
+        HotDomaine.put("www.site6.fr","192.168.40.6");
 
     }
-
 
     public String  ResolutDirect(String NomDemaine)
     {
@@ -60,8 +56,7 @@ public class DNSserver1 {
     public static void main(String args[]) throws IOException {
         //  try
         // {
-        DNSserver1 dnsserver=new DNSserver1();
-
+        DNSServer3 dnsserver=new DNSServer3();
         DatagramSocket server=new DatagramSocket(dnsserver.PortDNS);
 
         while(true)
@@ -73,16 +68,17 @@ public class DNSserver1 {
             server.receive(receiver);
             String str=new String(receiver.getData());
             String s=str.trim();
-            System.out.println("Request from client:"+s);
+            System.out.println("Request from client :"+s);
             InetAddress addr=receiver.getAddress();
             int port=receiver.getPort();
+
             String ip=dnsserver.ResolutDirect(s);
             String name=dnsserver.ResolutInverse(s);
 
             if(name!=null)
             {
 
-                sendbyte=("Reponse  DNS1:"+name).getBytes();
+                sendbyte=("Reponse DNS 3:"+name).getBytes();
                 DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                 server.send(sender);
                 //  break;
@@ -90,7 +86,7 @@ public class DNSserver1 {
             if(ip!=null)
             {
 
-                sendbyte=("Reponse  DNS1:"+ip).getBytes();
+                sendbyte=("Reponse DNS 3:"+ip).getBytes();
                 DatagramPacket sender=new DatagramPacket(sendbyte,sendbyte.length,addr,port);
                 server.send(sender);
                 // break;
@@ -105,5 +101,5 @@ public class DNSserver1 {
 
         }
 
-     }
+    }
 }
